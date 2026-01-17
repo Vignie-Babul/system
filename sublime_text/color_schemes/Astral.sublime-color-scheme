@@ -1,0 +1,130 @@
+// Documentation at:
+// - https://www.sublimetext.com/docs/color_schemes.html
+// - https://www.sublimetext.com/docs/scope_naming.html (for `rules` section)
+
+// ctrl + alt + shift + p - get scope name for highlighted text.
+
+// `astral.sh` was used as a reference.
+
+
+{
+	"variables": {
+		"grey75": "hsl(0, 0%, 75%)",
+		"grey55": "hsl(0, 0%, 55%)",
+
+		"pink": "#f47ff3",
+		"grey_pink": "#cfb0cf",
+		"lime": "#d6fa67",
+		"cyan": "#5fe6e1",
+		"mint": "#abe1aa",
+		"purple": "#9e6dba",
+		// "dark_purple": "#1e0f26", // lighter
+		"dark_purple": "#140a1a",
+
+		"primary": "var(pink)",
+		"background": "var(dark_purple)",
+		"foreground": "var(grey_pink)",
+
+		"punctuation": "var(grey_pink)",
+		"comment": "var(grey55)",
+		"constants": "var(lime)",
+		"constants_numeric": "var(cyan)",
+		"constants_other": "var(pink)",
+		"entity": "var(mint)",
+		"keyword": "var(pink)",
+		"types": "var(mint)",
+		"string": "var(lime)",
+		"built_in": "var(lime)",
+		"variable": "var(grey_pink)",
+		"class_self": "var(mint)",
+		"func_parameters": "var(grey_pink)",
+		"decorator": "var(grey_pink)",
+
+		"invalid_bg": "#d8290d",
+		"invalid_fg": "#f2f2f2"
+	},
+	"globals": {
+		"background": "var(background)",
+		"foreground": "var(foreground)",
+		"caret": "var(primary)",
+		"invisibles": "color(var(primary) a(0.2))",
+		"line_highlight": "color(var(primary) a(0.04))",
+		"selection": "color(var(primary) a(0.08))",
+		"inactive_selection": "color(var(primary) a(0.07))",
+		"gutter_foreground": "color(var(background) s(- 10%) l(25%))",
+		"gutter_foreground_highlight": "var(primary)"
+	},
+	"rules": [
+		{
+			"scope": "punctuation",
+			"foreground": "var(punctuation)"
+		},
+
+		{
+			"scope": "comment, punctuation.definition.comment",
+			"foreground": "var(comment)",
+			"font_style": "italic"
+		},
+
+		{
+			"scope": "constant, constants.language",
+			"foreground": "var(constants)"
+		},
+		{
+			"scope": "constant.numeric, punctuation.separator.decimal",
+			"foreground": "var(constants_numeric)"
+		},
+		{
+			"scope": "constant.character.escape, constant.other.placeholder",
+			"foreground": "var(constants_other)"
+		},
+
+		{
+			"scope": "entity",
+			"foreground": "var(entity)"
+		},
+
+		{
+			"scope": "invalid.illegal",
+			"background": "var(invalid_bg)",
+			"foreground": "var(invalid_fg)"
+		},
+
+		{
+			"scope": "keyword",
+			"foreground": "var(keyword)"
+		},
+
+		{
+			"scope": "storage",
+			"foreground": "var(types)"
+		},
+
+		{
+			"scope": "string, punctuation.definition.string",
+			"foreground": "var(string)"
+		},
+
+		{
+			"scope": "support",
+			"foreground": "var(built_in)"
+		},
+
+		{
+			"scope": "variable",
+			"foreground": "var(variable)"
+		},
+		{
+			"scope": "variable.language",
+			"foreground": "var(class_self)"
+		},
+		{
+			"scope": "variable.parameter",
+			"foreground": "var(func_parameters)"
+		},
+		{
+			"scope": "variable.annotation, punctuation.definition.annotation",
+			"foreground": "var(decorator)"
+		},
+	]
+}

@@ -1,0 +1,128 @@
+// Documentation at:
+// - https://www.sublimetext.com/docs/color_schemes.html
+// - https://www.sublimetext.com/docs/scope_naming.html (for `rules` section)
+
+// ctrl + alt + shift + p - get scope name for highlighted text.
+
+// Mono - single-color Sublime Text color scheme.
+// Write variable in `primary` to change single color.
+// Color scheme was tested on C and Python code.
+
+
+{
+	"variables": {
+		"black": "hsl(0, 0%, 0%)",
+		"grey75": "hsl(0, 0%, 75%)",
+		"grey25": "hsl(0, 0%, 25%)",
+		"grey8": "hsl(0, 0%, 8%)",
+
+		"purple_red": "#ff1c6b",
+		"purple": "#944ac9",
+
+		"primary": "var(purple_red)",
+		"background": "var(black)",
+		"foreground": "var(grey75)",
+
+		"punctuation": "var(grey75)",
+		"comment": "var(grey25)",
+		"constants": "var(grey75)",
+		"constants_numeric": "var(grey75)",
+		"constants_other": "var(grey75)",
+		"entity": "var(grey75)",
+		"keyword": "var(primary)",
+		"types": "var(grey75)",
+		"string": "color(var(primary) s(- 30%) l(- 5%))",
+		"built_in": "var(grey75)",
+		"variable": "var(grey75)",
+		"class_self": "var(grey75)",
+		"func_parameters": "var(grey75)",
+		"decorator": "var(grey75)",
+
+		"invalid_bg": "#d8290d",
+		"invalid_fg": "#f2f2f2"
+	},
+	"globals": {
+		"background": "var(background)",
+		"foreground": "var(foreground)",
+		"caret": "var(primary)",
+		"invisibles": "color(var(primary) a(0.2))",
+		"line_highlight": "color(var(primary) a(0.04))",
+		"selection": "color(var(primary) a(0.08))",
+		"inactive_selection": "color(var(primary) a(0.07))",
+		"gutter_foreground": "var(grey8)",
+		"gutter_foreground_highlight": "var(primary)"
+	},
+	"rules": [
+		{
+			"scope": "punctuation",
+			"foreground": "var(punctuation)"
+		},
+
+		{
+			"scope": "comment, punctuation.definition.comment",
+			"foreground": "var(comment)",
+			"font_style": "italic"
+		},
+
+		{
+			"scope": "constant, constants.language",
+			"foreground": "var(constants)"
+		},
+		{
+			"scope": "constant.numeric, punctuation.separator.decimal",
+			"foreground": "var(constants_numeric)"
+		},
+		{
+			"scope": "constant.character.escape, constant.other.placeholder",
+			"foreground": "var(constants_other)"
+		},
+
+		{
+			"scope": "entity",
+			"foreground": "var(entity)"
+		},
+
+		{
+			"scope": "invalid.illegal",
+			"background": "var(invalid_bg)",
+			"foreground": "var(invalid_fg)"
+		},
+
+		{
+			"scope": "keyword",
+			"foreground": "var(keyword)"
+		},
+
+		{
+			"scope": "storage",
+			"foreground": "var(types)"
+		},
+
+		{
+			"scope": "string, punctuation.definition.string",
+			"foreground": "var(string)"
+		},
+
+		{
+			"scope": "support",
+			"foreground": "var(built_in)"
+		},
+
+		{
+			"scope": "variable",
+			"foreground": "var(variable)"
+		},
+		{
+			"scope": "variable.language",
+			"foreground": "var(class_self)"
+		},
+		{
+			"scope": "variable.parameter",
+			"foreground": "var(func_parameters)"
+		},
+		{
+			"scope": "variable.annotation, punctuation.definition.annotation",
+			"foreground": "var(decorator)"
+		},
+	]
+}

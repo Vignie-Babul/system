@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+async def ${1:function}() -> None:
+	...
+
+]]></content>
+	<tabTrigger>adef</tabTrigger>
+	<scope>source.python</scope>
+	<description>Async function</description>
+</snippet>
