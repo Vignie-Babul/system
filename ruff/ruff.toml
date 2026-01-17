@@ -1,0 +1,10 @@
+indent-width = 4
+line-length = 120
+
+[lint]
+select = ["E", "F", "UP", "B", "SIM", "I"]
+ignore = ["I001"]
+
+[format]
+quote-style = "single"
+indent-style = "tab"
