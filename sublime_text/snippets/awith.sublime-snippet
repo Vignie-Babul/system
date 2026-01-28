@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+async with ${1:open()} as :
+	...
+]]></content>
+	<tabTrigger>awith</tabTrigger>
+	<scope>source.python</scope>
+	<description>Async with context manager</description>
+</snippet>

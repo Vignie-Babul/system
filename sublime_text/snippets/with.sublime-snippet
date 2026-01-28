@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+with ${1:open()} as :
+	...
+]]></content>
+	<tabTrigger>with</tabTrigger>
+	<scope>source.python</scope>
+	<description>With context manager</description>
+</snippet>
