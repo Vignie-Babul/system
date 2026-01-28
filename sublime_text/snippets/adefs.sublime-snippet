@@ -2,7 +2,6 @@
 	<content><![CDATA[
 async def ${1:function}(self) -> None:
 	...
-
 ]]></content>
 	<tabTrigger>adefs</tabTrigger>
 	<scope>source.python</scope>
