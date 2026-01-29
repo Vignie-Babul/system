@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+from logging.config import fileConfig
+
+
+fileConfig('${1:logging.ini}')
+_log = logging.getLogger(__name__)
+]]></content>
+	<tabTrigger>log_file_conf</tabTrigger>
+	<scope></scope>
+	<description>Logger configuration from file</description>
+</snippet>

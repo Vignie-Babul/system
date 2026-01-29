@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+_log = logging.getLogger(__name__)
+_log.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter(
+	'[{asctime}] [{name}/{levelname}] [{filename}/{funcName}]: {message}',
+	style='{',
+	datefmt='%Y-%m-%d %H:%M:%S',
+)
+
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+_log.addHandler(console_handler)
+]]></content>
+	<tabTrigger>log_conf</tabTrigger>
+	<scope></scope>
+	<description>Logger configuration</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+logging.getLogger(__name__).addHandler(logging.NullHandler())
+]]></content>
+	<tabTrigger>log_null</tabTrigger>
+	<scope>source.python</scope>
+	<description>NullHandler logger</description>
+</snippet>

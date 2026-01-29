@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+[loggers]
+keys=root
+
+[handlers]
+keys=console_handler
+
+[formatters]
+keys=formatter
+
+[logger_root]
+level=DEBUG
+handlers=console_handler
+
+[handler_console_handler]
+class=StreamHandler
+level=DEBUG
+formatter=formatter
+args=(sys.stderr, )
+
+[formatter_formatter]
+format=[%(asctime)s] [%(name)s/%(levelname)s] [%(filename)s/%(funcName)s]: %(message)s
+
+]]></content>
+	<tabTrigger>log_ini</tabTrigger>
+	<scope></scope>
+	<description>Logger ini config</description>
+</snippet>
