@@ -21,6 +21,7 @@ args=(sys.stderr, )
 
 [formatter_formatter]
 format=[%(asctime)s] [%(name)s/%(levelname)s] [%(filename)s/%(funcName)s]: %(message)s
+datefmt=%Y-%m-%d %H:%M:%S
 
 ]]></content>
 	<tabTrigger>log_ini</tabTrigger>
