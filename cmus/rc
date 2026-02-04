@@ -1,0 +1,7 @@
+#
+# ~/.config/cmus/rc
+#
+
+# cmus config
+
+set altformat_title=%F
