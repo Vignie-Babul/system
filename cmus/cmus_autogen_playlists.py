@@ -15,8 +15,8 @@ def is_dir_exists(path: str) -> bool:
 	return True
 
 def get_subdirs_abs_paths(path: str) -> Iterator[str]:
-	for dir in sorted(os.listdir(path)):
-		yield os.path.join(path, dir)
+	for dir_ in sorted(os.listdir(path)):
+		yield os.path.join(path, dir_)
 
 def write_playlist(filepath: str, songs: list[str]) -> None:
 	with open(filepath, 'w') as playlist:
