@@ -2,6 +2,10 @@ from collections.abc import Iterator
 import os
 
 
+'''script ignores files, that start with PRIVATE (double underscore) `tag`'''
+
+PRIVATE = '__'
+
 HOMEDIR = os.path.expanduser('~')
 MUSIC_DIR = f'{HOMEDIR}/audio/music'
 CMUS_PLAYLISTS_DIR = f'{HOMEDIR}/.config/cmus/playlists'
@@ -13,6 +17,10 @@ def is_dir_exists(path: str) -> bool:
 		return False
 
 	return True
+
+def is_file_private(path: str) -> bool:
+	print(os.path.basename(path), os.path.basename(path).startswith(PRIVATE))
+	return os.path.basename(path).startswith(PRIVATE)
 
 def get_subdirs_abs_paths(path: str) -> Iterator[str]:
 	for dir_ in sorted(os.listdir(path)):
@@ -35,8 +43,11 @@ def main(music_dir: str, pl_dir: str) -> None:
 		pl_abs_path = os.path.join(pl_dir, subdir)
 
 		songs = get_subdirs_abs_paths(music_abs_path)
-		only_file_songs = filter(os.path.isfile, songs)
-		write_playlist(pl_abs_path, only_file_songs)
+		only_public_file_songs = filter(
+			lambda x: os.path.isfile(x) and not is_file_private(x),
+			songs,
+		)
+		write_playlist(pl_abs_path, only_public_file_songs)
 
 
 if __name__ == '__main__':
