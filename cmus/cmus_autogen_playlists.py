@@ -19,7 +19,6 @@ def is_dir_exists(path: str) -> bool:
 	return True
 
 def is_file_private(path: str) -> bool:
-	print(os.path.basename(path), os.path.basename(path).startswith(PRIVATE))
 	return os.path.basename(path).startswith(PRIVATE)
 
 def get_subdirs_abs_paths(path: str) -> Iterator[str]:
