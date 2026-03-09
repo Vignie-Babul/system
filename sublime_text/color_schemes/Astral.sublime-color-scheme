@@ -99,6 +99,10 @@
 			"scope": "storage",
 			"foreground": "var(types)"
 		},
+		{
+			"scope": "storage.modifier.async",
+			"foreground": "var(keyword)"
+		},
 
 		{
 			"scope": "string, punctuation.definition.string",
