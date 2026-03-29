@@ -91,17 +91,13 @@
 		},
 
 		{
-			"scope": "keyword",
+			"scope": "keyword, storage.modifier.async",
 			"foreground": "var(keyword)"
 		},
 
 		{
 			"scope": "storage",
 			"foreground": "var(types)"
-		},
-		{
-			"scope": "storage.modifier.async",
-			"foreground": "var(keyword)"
 		},
 
 		{
