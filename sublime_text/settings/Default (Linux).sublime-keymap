@@ -1,0 +1,4 @@
+[
+	{ "keys": ["ctrl+alt+s"], "command": "sort_lines" },
+	{ "keys": ["ctrl+alt+shift+s"], "command": "sort_lines", "args": {"reverse": true} },
+]
