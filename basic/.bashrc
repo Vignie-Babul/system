@@ -18,3 +18,7 @@ clear_screen_and_scrollback() {
 }
 
 bind -x '"\C-l":"clear_screen_and_scrollback"'
+
+# -----------------------------------------------
+
+. "$HOME/.cargo/env"
