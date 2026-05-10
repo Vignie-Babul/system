@@ -12,7 +12,7 @@ SLEEP_TIME_SEC=20
 if sudo rtcwake --date=+${WAKE_TIME_MIN}min --mode=mem; then
 	printf "\nSystem shutdown in %s sec\n" "$SLEEP_TIME_SEC"
 	sleep $SLEEP_TIME_SEC
-	shutdown -P now
+	systemctl poweroff
 	exit 0
 else
 	echo "rtcwake failed"
